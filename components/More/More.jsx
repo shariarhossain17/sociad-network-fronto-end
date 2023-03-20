@@ -8,7 +8,15 @@ const More = () => {
     <>
       <div className="mt-32 relative">
         <ul>
-          <li
+         {
+            moreModal ?  <li
+            onClick={() => setMoreModal(false)}
+            className={`hover:bg-gray-50 hover:dark:bg-[#1f1e1e] transition ease-in-out delay-150 px-2 py-2 rounded-full mt-4 flex items-center gap-3 text-[17px]`}
+          >
+          <AiOutlineMenu size={26} />
+
+            <span className="font-[500]">More</span>
+          </li> :  <li
             onClick={() => setMoreModal(!false)}
             className={`hover:bg-gray-50 hover:dark:bg-[#1f1e1e] transition ease-in-out delay-150 px-2 py-2 rounded-full mt-4 flex items-center gap-3 text-[18px]`}
           >
@@ -16,6 +24,7 @@ const More = () => {
 
             <span>More</span>
           </li>
+         }
         </ul>
         {moreModal ? <MoreList /> : null}
       </div>
