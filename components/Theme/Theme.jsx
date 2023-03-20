@@ -14,9 +14,12 @@ const Theme = () => {
   if (!mounted) return null;
   return (
     <div>
-      <div className="flex items-center gap-2">
+      <div
+        onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+        className="flex items-center gap-2 cursor-pointer"
+      >
         <h4>Switch Appearance</h4>
-        <button onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
+        <button>
           <MdOutlineDarkMode size={24} />
         </button>
       </div>

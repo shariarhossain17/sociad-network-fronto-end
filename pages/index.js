@@ -7,9 +7,9 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   return (
     <>
-      <h1>Hello Instagram</h1>
+      <h1>Hello Instagram Home page</h1>
 
-      <Theme />
+      <Theme/>
     </>
   );
 }
