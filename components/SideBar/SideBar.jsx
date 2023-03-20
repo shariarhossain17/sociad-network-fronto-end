@@ -9,6 +9,7 @@ import {
 import { IoCreateOutline } from "react-icons/io5";
 import { MdExplore, MdOutlineExplore } from "react-icons/md";
 import { RiVideoFill, RiVideoLine } from "react-icons/ri";
+import More from "../More/More";
 
 
 const SideBar = () => {
@@ -16,7 +17,7 @@ const SideBar = () => {
 
   return (
     <>
-      <section className="px-4 pt-6">
+      <section className="px-4 pt-6 relative h-[100vh]">
         <h1 className="text-[24px] italic font-sans font-[500]">
           <Link href="/"> Medium Share</Link>
         </h1>
@@ -115,6 +116,8 @@ const SideBar = () => {
             </li>
           </ul>
         </div>
+
+        <More/>
       </section>
     </>
   );

@@ -16,7 +16,7 @@ const Theme = () => {
     <div>
       <div
         onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-        className="flex items-center gap-2 cursor-pointer"
+        className="flex items-center gap-[25px] cursor-pointer"
       >
         <h4>Switch Appearance</h4>
         <button>
