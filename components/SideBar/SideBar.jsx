@@ -1,19 +1,23 @@
+import { openSearch } from "@/features/search/searchSlice";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import {
     AiFillHome,
     AiFillMessage,
     AiOutlineHome,
-    AiOutlineMessage, AiOutlineSearch
+    AiOutlineMessage,
+    AiOutlineSearch
 } from "react-icons/ai";
 import { IoCreateOutline } from "react-icons/io5";
 import { MdExplore, MdOutlineExplore } from "react-icons/md";
 import { RiVideoFill, RiVideoLine } from "react-icons/ri";
+import { useDispatch, useSelector } from "react-redux";
 import More from "../More/More";
-
 
 const SideBar = () => {
   const router = useRouter();
+  const toggle = useSelector((state) => state.search.toggle);
+  const dispatch = useDispatch();
 
   return (
     <>
@@ -28,7 +32,7 @@ const SideBar = () => {
               <Link
                 className={`hover:bg-gray-50 hover:dark:bg-[#1f1e1e] transition ease-in-out delay-150 px-2 py-2 rounded-full flex items-center gap-3 text-[18px] ${
                   router.pathname === "/" && "font-bold"
-                } &`}
+                } `}
                 href="/"
               >
                 {router.pathname === "/" ? (
@@ -40,10 +44,11 @@ const SideBar = () => {
               </Link>
             </li>
             <li
-              className={`hover:bg-gray-50 hover:dark:bg-[#1f1e1e] transition ease-in-out delay-150 px-2 py-2 rounded-full mt-4 flex items-center gap-3 text-[18px]`}
+              onClick={() => dispatch(openSearch())}
+              className={`hover:bg-gray-50 hover:dark:bg-[#1f1e1e] transition ease-in-out delay-150 px-2 py-2 rounded-full mt-4 flex items-center gap-3 text-[18px] cursor-pointer`}
             >
               <AiOutlineSearch size={26} />
-              <span> Search</span>
+              <span className="cursor-pointer"> Search</span>
             </li>
 
             <li className="">
@@ -117,7 +122,7 @@ const SideBar = () => {
           </ul>
         </div>
 
-        <More/>
+        <More />
       </section>
     </>
   );

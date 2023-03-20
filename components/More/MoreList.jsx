@@ -8,7 +8,7 @@ import Theme from "../Theme/Theme";
 const MoreList = () => {
   return (
     <>
-      <ul className="absolute  right-[-10px] top-[-290px] rounded-md bg-white shadow-md dark:bg-[#262626] w-[200px]">
+      <ul className="absolute  right-[-10px] top-[-320px] rounded-md bg-white shadow-md dark:bg-[#262626] w-[200px]">
         <li className="">
           <Link
             className={`hover:bg-gray-100 hover:dark:bg-[#1f1e1e] transition ease-in-out delay-150 p-2  flex items-center justify-between gap-3 text-[16px] dark:border-none border-b-[2px]`}
