@@ -8,10 +8,9 @@ export default function App({ Component, pageProps }) {
   return (
     <ThemeProvider attribute="class">
       <Provider store={store}>
-      <Layout>
-        
-        <Component {...pageProps} />
-      </Layout>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </Provider>
     </ThemeProvider>
   );

@@ -2,11 +2,11 @@ import { openSearch } from "@/features/search/searchSlice";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import {
-    AiFillHome,
-    AiFillMessage,
-    AiOutlineHome,
-    AiOutlineMessage,
-    AiOutlineSearch
+  AiFillHome,
+  AiFillMessage,
+  AiOutlineHome,
+  AiOutlineMessage,
+  AiOutlineSearch
 } from "react-icons/ai";
 import { IoCreateOutline } from "react-icons/io5";
 import { MdExplore, MdOutlineExplore } from "react-icons/md";
@@ -21,8 +21,8 @@ const SideBar = () => {
 
   return (
     <>
-      <section className="px-4 pt-6 relative h-[100vh]">
-        <h1 className="text-[24px] italic font-sans font-[500]">
+      <section className={`px-4 pt-6  h-[100vh]`}>
+        <h1 className="text-[24px] italic font-sans font-[500] ">
           <Link href="/"> Medium Share</Link>
         </h1>
 
@@ -97,7 +97,8 @@ const SideBar = () => {
               </Link>
             </li>
             <li
-              className={`hover:bg-gray-50 hover:dark:bg-[#1f1e1e] transition ease-in-out delay-150 px-2 py-2 rounded-full mt-4 flex items-center gap-3 text-[18px]`}
+              onClick={() => dispatch(openSearch())}
+              className={`hover:bg-gray-50 hover:dark:bg-[#1f1e1e] transition ease-in-out delay-150 px-2 py-2 rounded-full mt-4 flex items-center gap-3 text-[18px] cursor-pointer`}
             >
               <IoCreateOutline size={26} />
 
