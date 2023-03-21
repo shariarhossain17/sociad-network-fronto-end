@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  toggle: false,
+  toggleSearch: false,
+  toggleModal:false,
 };
 
 const searchSlice = createSlice({
@@ -9,13 +10,13 @@ const searchSlice = createSlice({
   initialState,
   reducers: {
     openSearch: (state) => {
-      state.toggle = !state.toggle;
+      state.toggleSearch = !state.toggleSearch;
     },
     openModal: (state) => {
-      state.toggle = !state.toggle;
+      state.toggleModal = !state.toggleModal;
     },
     closeModal: (state) => {
-      state.toggle = false;
+      state.toggleModal = false;
     },
   },
 });
