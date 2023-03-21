@@ -11,7 +11,13 @@ const searchSlice = createSlice({
     openSearch: (state) => {
       state.toggle = !state.toggle;
     },
+    openModal: (state) => {
+      state.toggle = !state.toggle;
+    },
+    closeModal: (state) => {
+      state.toggle = false;
+    },
   },
 });
-export const { openSearch } = searchSlice.actions;
+export const { openSearch, openModal,closeModal } = searchSlice.actions;
 export default searchSlice.reducer;
