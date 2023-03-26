@@ -15,7 +15,10 @@
     "next": "13.2.4",
     "next-themes": "^0.2.1",
     "react": "18.2.0",
+    "react-animated-slider": "^2.0.0",
+    "react-animated-slider-2": "^1.1.5",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.43.8",
     "react-icons": "^4.8.0",
     "react-redux": "^8.0.5",
     "yarn": "^1.22.19"
