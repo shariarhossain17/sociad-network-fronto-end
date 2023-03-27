@@ -23,7 +23,7 @@ const SignUp = () => {
   };
   return (
     <>
-      <div className="w-[350px] mx-auto border border-gray-400 py-6 px-5 mt-[130px]">
+      <div className="w-[350px] mx-auto border border-gray-400 py-6 px-5 mt-[100px]">
         <div className="mb-4 ">
           <h1 className="text-[26px] italic font-sans font-bold text-center text-[#262626]">
             Medium Share
@@ -133,7 +133,11 @@ const SignUp = () => {
               type={passwordShown ? "text" : "password"}
             />
 
-            <div className={`absolute right-0 bottom-[4px] ${userData?.password && "flex items-center px-2"}`}>
+            <div
+              className={`absolute right-0 bottom-[4px] ${
+                userData?.password && "flex items-center px-2"
+              }`}
+            >
               <div>
                 {errors?.password?.type === "required" && (
                   <CiCircleRemove
@@ -192,11 +196,14 @@ const SignUp = () => {
 
           <button
             type="submit"
-            className="mt-4 bg-[#4cb5f9] text-white font-[600] text-[16px]  py-1 rounded-md w-[270px] mx-auto"
+            className="mt-4 bg-[#4cb5f9] text-white font-[600] text-[16px]  py-1 rounded-md w-[250px] mx-auto"
           >
             Sign up
           </button>
         </form>
+      </div>
+      <div className="w-[350px] mx-auto border border-gray-400 py-4 px-5 mt-4">
+       <p className="text-[13px] text-center">Have an account? <Link className="text-[#4cb5f9] font-[600]" href='/auth/login'>Log in</Link></p>
       </div>
     </>
   );
